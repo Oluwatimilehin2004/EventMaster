@@ -1,0 +1,13 @@
+{
+  "devDependencies": {
+    "tailwindcss": "^3.4.17"
+  },
+  "scripts": {
+    "build": "npx tailwindcss -i ./src/input.css -o ./public/output.css",
+    "watch": "npx tailwindcss -i ./src/input.css -o ./public/output.css --watch"
+  },
+  "dependencies": {
+    "emailjs": "^4.0.3",
+    "html2pdf.js": "^0.9.0"
+  }
+}
