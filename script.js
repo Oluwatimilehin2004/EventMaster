@@ -60,7 +60,9 @@ let ticketId = Math.floor(10000 + Math.random() * 90000);
                     type: "application/pdf" // MIME type
                 }
             ] // Attach the Base64 PDF like this
-        })
+        },
+        CONFIG.EMAILJS_PUBLIC_KEY
+    )
         .then(function(response) {
             console.log("Email sent successfully", response);
         }, function(error) {
