@@ -1,7 +1,5 @@
 # EventMaster
 
-![Design preview for the Conference ticket generator coding challenge](./preview.jpg)
-
 EventMaster
 EventMaster is a powerful and intuitive conference ticket generator designed to simplify the event management process. This application allows users to effortlessly generate personalized tickets for attendees, complete with their names, profile pictures, and unique ticket IDs.
 
