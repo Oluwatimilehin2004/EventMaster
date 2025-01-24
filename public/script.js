@@ -1,4 +1,3 @@
-
 const fullName = document.getElementById("full_name");
 const username = document.getElementById("username");
 const email = document.getElementById("email");
@@ -49,6 +48,7 @@ let ticketId = Math.floor(10000 + Math.random() * 90000);
             email: email.value,
             user_name: username.value,
             ticket_id: ticketId,
+            reply_to: fullName.value,
             support_email: "oluwatimilehinayo2004@gmail.com",
             current_year: new Date().getFullYear(),
             from_name: "Papa[Ojudun Ayomide Oluwatimilehin]...",
