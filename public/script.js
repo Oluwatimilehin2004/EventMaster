@@ -1,3 +1,5 @@
+import CONFIG from './src/config';
+
 const fullName = document.getElementById("full_name");
 const username = document.getElementById("username");
 const email = document.getElementById("email");
@@ -43,7 +45,7 @@ let ticketId = Math.floor(10000 + Math.random() * 90000);
 
     // Function to send the email with the PDF attachment
     function sendEmailWithAttachment(base64PDF) {
-        emailjs.send(process.env.EMAILJS_SERVICE_ID, process.env.EMAILJS_TEMPLATE_ID, {
+        emailjs.send(CONFIG.EMAILJS_SERVICE_ID, CONFIG.EMAILJS_TEMPLATE_ID, {
             name: fullName.value,
             email: email.value,
             user_name: username.value,
@@ -60,7 +62,7 @@ let ticketId = Math.floor(10000 + Math.random() * 90000);
                 }
             ] // Attach the Base64 PDF like this
         },
-        process.env.EMAILJS_PUBLIC_KEY
+        CONFIG.EMAILJS_PUBLIC_KEY
     )
         .then(function(response) {
             console.log("Email sent successfully", response);
