@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EventMaster</title>                      
+    <link rel="stylesheet" href="output.css">
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700;800&family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Inconsolata:wght@200..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Outfit:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+</head>
+<body id="body" class="bg-mobile-background md:bg-tablet-background lg:bg-desktop-background bg-cover overflow-x-hidden font-[Inconsolata]">
+    <div>
+        <!-- first-circle pattern -->
+        <img src="./assets/images/pattern-circle.svg"
+         class="-z-10 fixed -top-5 -left-3 lg:left-10 w-20 h-20 md:w-32 md:h-32 lg:w-36 lg:h-36" alt="pattern-circle">
+        <!-- second-circle pattern -->
+         <img src="./assets/images/pattern-circle.svg"
+         class="-z-10 fixed top-1/2 -right-4 lg:right-[30%] w-20 h-20 md:w-32 md:h-32 lg:w-36 lg:h-36" alt="pattern-circle">
+        <!-- grid lines -->
+         <div class="flex fixed -z-10">
+            <img src="./assets/images/pattern-lines.svg" class="w-[200vw] lg:h-[100vh] relative top-0" alt="pattern-lines">
+            <img src="./assets/images/pattern-lines.svg" class="w-[200vw] lg:h-[100vh] relative top-0" alt="pattern-lines">
+        </div>
+        <div class="bottom-0 -z-20 fixed lg:left-0">
+            <img 
+            class="w-[70%]"
+            src="./assets/images/pattern-squiggly-line-bottom.svg" alt="curly[ies]">
+        </div>
+        <div class="bottom-0 -z-20 absolute h-6 rotate-[180deg] top-28 right-0">
+            <img 
+            class="w-[40%] lg:w-[50%]"
+            src="./assets/images/pattern-squiggly-line-top.svg" alt="curly[ies]">
+        </div>
+        <section 
+        class="z-20 w-[95%] lg:w-[70%] flex flex-col justify-center items-center mx-auto text-white space-y-10 top-0 left-[50%] pt-14 pb-20">
+            <div>
+                <img 
+                class=""
+                src="./assets/images/logo-full.svg" alt="logo">
+            </div>
+            <div class="text-center space-y-6">
+                <h1 class="text-xl lg:text-2xl font-bold">Your Journey to Coding Conf 2025 Starts Here!</h1>
+                <p class="text-sm lg:text-md font-light">Secure your spot at next year's biggest coding conference.</p>
+            </div>
+            <div>
+                <form id="input_form" class="space-y-10">
+                    <div class="w-80 p-4 border-2 border-dashed border-gray-600 rounded-lg backdrop-blur-2xl text-center text-gray-400">
+                        <div class="flex flex-col items-center justify-center space-y-2">
+                          <div class="p-1.5 backdrop-blur-xl border rounded-lg cursor-pointer" id="uploadButton">
+                            <input id="fileInput" class="hidden" type="file" accept="image/*">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="none" viewBox="0 0 30 30">
+                              <path fill="#F57463" fill-rule="evenodd" d="M21.894 11.252a.264.264 0 0 1-.229-.225c-.368-2.634-2.51-5.924-6.663-5.924-4.465 0-6.3 3.636-6.657 5.928a.264.264 0 0 1-.228.22c-2.95.362-4.945 2.622-4.945 5.729a5.802 5.802 0 0 0 3.423 5.277 6.274 6.274 0 0 0 2.305.468h2.528a.45.45 0 0 0 .45-.45c0-.267-.233-.472-.5-.484a3.077 3.077 0 0 1-2.049-.9 3.123 3.123 0 0 1 0-4.418l3.461-3.462c.147-.146.307-.277.479-.392.076-.05.158-.085.236-.129.1-.054.196-.114.301-.158.1-.04.206-.065.308-.096.092-.027.181-.062.276-.081.191-.039.384-.056.578-.059.011 0 .022-.004.034-.004.01 0 .018.003.027.004.196.002.391.02.584.059.094.019.18.053.271.08.105.031.211.055.313.098.1.042.193.098.288.15.084.046.17.083.25.137.154.103.295.221.428.349.016.014.034.024.049.039l3.463 3.463a3.124 3.124 0 0 1 0 4.42c-.558.56-1.284.86-2.05.897-.266.013-.497.219-.497.486 0 .249.202.451.451.451h2.512c.435 0 1.314-.06 2.344-.473a5.794 5.794 0 0 0 3.394-5.272c0-3.104-1.991-5.363-4.935-5.728Z" clip-rule="evenodd"></path>
+                              <path fill="#F57463" fill-rule="evenodd" d="M18.464 19.62a.936.936 0 0 0 .663-1.6l-3.464-3.464a.938.938 0 0 0-.664-.275l-.014.002a.932.932 0 0 0-.65.274l-3.462 3.462a.936.936 0 1 0 1.326 1.325l1.864-1.862v6.479a.937.937 0 1 0 1.875 0v-6.48l1.864 1.863a.93.93 0 0 0 .662.275Z" clip-rule="evenodd"></path>
+                            </svg>
+                          </div>
+                          <p class="text-[12px] text-gray-300">Drag and drop or click to upload</p>
+                        </div>
+                        <p class="text-[10px] text-sm">Upload your photo (JPG or PNG, max size: 5MB)</p>
+                      </div>
+                      
+                                    
+                    <div class="w-80">
+                      <label for="full-name" class="block text-sm text-gray-300 mb-2">Full Name</label>
+                      <input
+                        type="text"
+                        id="full_name"
+                        placeholder=""
+                        class="w-full px-4 py-2 bg-[url(/assets/images/backdrop-blur.png)] bg-cover text-gray-300 border backdrop-blur-2xl rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-700"
+                      />
+                    </div>
+                    <div class="w-80 text-[12px]">
+                      <label for="full-name" class="block text-sm text-gray-300 mb-2">Email Address</label>
+                      <input
+                        type="text"
+                        id="email"
+                        placeholder="example@gmail.com"
+                        class="w-full px-4 py-2 bg-[url(/assets/images/backdrop-blur.png)] bg-cover text-gray-300 border backdrop-blur-2xl rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-700"
+                      />
+                    </div>
+                    <div class="w-80 text-[12px]">
+                      <label for="full-name" class="block text-sm text-gray-300 mb-2">GitHub Username</label>
+                      <input
+                        type="text"
+                        id="username"
+                        placeholder="@yourusername"
+                        class="w-full px-4 py-2 bg-[url(/assets/images/backdrop-blur.png)] bg-cover text-gray-300 border backdrop-blur-2xl rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-700"
+                      />
+                    </div>
+                    <div>
+                        <button type="submit"
+                        class="w-full p-2 border bg-[url(/assets/images/btn-color.png)] bg-cover rounded-lg"
+                        id="btn_submit">Generate My Ticket</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </div>
+
+    <!-- Include EmailJS -->
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+    (function(){
+        emailjs.init({
+            publicKey: "nWxfLSB7whvOeMsZq",
+        });
+    })();
+    </script>
+
+    <!-- Include jsPDF -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+    <script src="./script.js"></script>
+</body>
+</html> 
