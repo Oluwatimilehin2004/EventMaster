@@ -155,13 +155,6 @@ let ticketId = Math.floor(10000 + Math.random() * 90000);
             const file = fileInput.files[0]; // Get the selected file
             console.log("Selected file:", file.name, file.size, file.type);
             uploadButton.innerHTML = `<p>${file.name}<br> ${file.size} bytes</p>`;
-
-            // Preview the uploaded file
-            const reader = new FileReader();
-            reader.onload = function (e) {
-                preview.src = e.target.result;
-            };
-            reader.readAsDataURL(file);
         }
     });
 
