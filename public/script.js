@@ -51,14 +51,7 @@ let ticketId = Math.floor(10000 + Math.random() * 90000);
             reply_to: fullName.value,
             support_email: "oluwatimilehinayo2004@gmail.com",
             current_year: new Date().getFullYear(),
-            from_name: "Papa[Ojudun Ayomide Oluwatimilehin]...",
-            attachments: [
-                {
-                    name: "ticket.pdf", // File name
-                    data: base64PDF,    // Base64-encoded content
-                    type: "application/pdf", // MIME type
-                }
-            ] // Attach the Base64 PDF like this
+            from_name: "Papa[Ojudun Ayomide Oluwatimilehin]..."
         },
         window.config.EMAILJS_PUBLIC_KEY
     )
