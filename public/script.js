@@ -182,3 +182,5 @@ let ticketId = Math.floor(10000 + Math.random() * 90000);
 //     }
     
 // window.addEventListener('load', testSendEmail)
+
+console.log(window.config.EMAILJS_PUBLIC_KEY)
