@@ -10,39 +10,39 @@ const preview = document.getElementById("preview");
 
 let ticketId = Math.floor(10000 + Math.random() * 90000);
 
-    const { jsPDF } = window.jspdf;
+    // const { jsPDF } = window.jspdf;
 
-    // Function to generate PDF and send via EmailJS
-    function generatePDF() {
-        const doc = new jsPDF();
-        const emailTemplate = document.getElementById("ticket");
+    // // Function to generate PDF and send via EmailJS
+    // function generatePDF() {
+    //     const doc = new jsPDF();
+    //     const emailTemplate = document.getElementById("ticket");
 
-        // Generate PDF from the HTML content
-        doc.html(emailTemplate, {
-            callback: function (doc) {
-                // Convert the PDF to a blob (binary data)
-                const pdfBlob = doc.output("blob");
+    //     // Generate PDF from the HTML content
+    //     doc.html(emailTemplate, {
+    //         callback: function (doc) {
+    //             // Convert the PDF to a blob (binary data)
+    //             const pdfBlob = doc.output("blob");
 
-                // Use FileReader to convert the PDF blob to Base64
-                const reader = new FileReader();
-                reader.onloadend = function () {
-                    const base64PDF = reader.result.split(",")[1];  // Get the Base64 part
+    //             // Use FileReader to convert the PDF blob to Base64
+    //             const reader = new FileReader();
+    //             reader.onloadend = function () {
+    //                 const base64PDF = reader.result.split(",")[1];  // Get the Base64 part
 
-                    // Send the email with the Base64 PDF as an attachment
-                    sendEmailWithAttachment(base64PDF);
-                };
+    //                 // Send the email with the Base64 PDF as an attachment
+    //                 sendEmailWithAttachment(base64PDF);
+    //             };
 
-                // Read the PDF blob as Base64
-                reader.readAsDataURL(pdfBlob);
-            },
-            margin: [10, 10, 10, 10],
-            x: 10,
-            y: 10
-        });
-    }
+    //             // Read the PDF blob as Base64
+    //             reader.readAsDataURL(pdfBlob);
+    //         },
+    //         margin: [10, 10, 10, 10],
+    //         x: 10,
+    //         y: 10
+    //     });
+    // }
 
     // Function to send the email with the PDF attachment
-    function sendEmailWithAttachment(base64PDF) {
+    function sendEmailWithAttachment() {
         emailjs.send(window.config.EMAILJS_SERVICE_ID, window.config.EMAILJS_TEMPLATE_ID, {
             name: fullName.value,
             email: email.value,
@@ -52,13 +52,13 @@ let ticketId = Math.floor(10000 + Math.random() * 90000);
             support_email: "oluwatimilehinayo2004@gmail.com",
             current_year: new Date().getFullYear(),
             from_name: "Papa[Ojudun Ayomide Oluwatimilehin]...",
-            attachments: [
-                {
-                    name: "ticket.pdf", // File name
-                    data: base64PDF,    // Base64-encoded content
-                    type: "application/pdf", // MIME type
-                }
-            ] // Attach the Base64 PDF like this
+            // attachments: [
+            //     {
+            //         name: "ticket.pdf", // File name
+            //         data: base64PDF,    // Base64-encoded content
+            //         type: "application/pdf", // MIME type
+            //     }
+            // ] // Attach the Base64 PDF like this
         },
         window.config.EMAILJS_PUBLIC_KEY
     )
