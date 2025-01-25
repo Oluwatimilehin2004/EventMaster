@@ -1,4 +1,4 @@
-import CONFIG from '../src/config';
+import CONFIG from './config';
 
 const fullName = document.getElementById("full_name");
 const username = document.getElementById("username");
